@@ -10,13 +10,15 @@ import java.util.Arrays;
 public class Solution26 {
   public static int removeDuplicates(int[] nums) {
       //将不一样的数据一次移动到数组的最前面
-      if (nums.length == 0 || nums == null)
+      if (nums.length == 0 || nums == null) {
           return 0;
+      }
       int index = 0;
       int n = nums.length;
       for (int i = 1; i < n; i++) {
-          if (nums[index] != nums[i])
+          if (nums[index] != nums[i]) {
               nums[++index] = nums[i];
+          }
       }
 
       //System.out.println(Arrays.toString(nums));
