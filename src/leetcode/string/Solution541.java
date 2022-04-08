@@ -1,5 +1,7 @@
 package leetcode.string;
 
+import java.util.*;
+
 /**
  * @author zhengguochun
  * @description
@@ -47,6 +49,13 @@ public class Solution541 {
 
 
     public String reverseStr(String s, int k) {
+
+        List<Integer> highTemp = new LinkedList<>();
+        Iterator<Integer> iterator =  highTemp.iterator();
+        while (iterator.hasNext()){
+            Integer j = iterator.next();
+            iterator.remove();
+        }
 
         int size = s.length();
         char[] ch = s.toCharArray();
