@@ -1,7 +1,6 @@
 package leetcode.string;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author zhengguochun
@@ -14,6 +13,9 @@ public class Solution416 {
     }
 
     public static boolean canPartition(int[] nums) {
+        List<Integer> list = new LinkedList<>();
+        list.remove(1);
+
         int sum = 0;
         int len = nums.length;
         for (int num: nums){
